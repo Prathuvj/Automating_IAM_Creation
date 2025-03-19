@@ -1,0 +1,26 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Terraform files
+*.tf text
+*.tfvars text
+*.tfvars.json text
+*.tfstate binary
+*.tfstate.* binary
+
+# Documentation
+*.md text diff=markdown
+*.txt text
+
+# Shell scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Windows scripts
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore 
