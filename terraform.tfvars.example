@@ -1,0 +1,17 @@
+aws_region     = "us-east-1"
+aws_access_key = "YOUR_AWS_ACCESS_KEY"
+aws_secret_key = "YOUR_AWS_SECRET_KEY"
+# aws_profile    = "default"  # Uncomment if using profiles
+
+iam_user_name  = "terraform-demo-user"
+iam_role_name  = "terraform-demo-role"
+policy_arns    = [
+  "arn:aws:iam::aws:policy/ReadOnlyAccess",
+  "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
+]
+trusted_services = ["ec2.amazonaws.com", "lambda.amazonaws.com"]
+tags = {
+  Environment = "dev"
+  Project     = "terraform-iam-automation"
+  Owner       = "terraform"
+} 
